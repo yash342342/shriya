@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Shriya🎉</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1702325583531-228c721da242?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    transition: background 1.5s ease-in-out;
+  }
+
+  /* Letter box */
+  .letter {
+    height: 180px;
+    width: 280px;
+    background: rgba(255, 248, 220, 0.8);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.5s, box-shadow 0.5s;
+    z-index: 3;
+    animation: pulse 2s infinite;
+  }
+  .letter:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(255, 77, 90, 0.7);
+  }
+  .letter h2 {
+    font-size: 1.5rem;
+    color: #ff4b5c;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+  }
+
+  /* Main container */
+  .container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 25px;
+    max-width: 550px;
+    z-index: 2;
+    position: relative;
+    animation: fadeInScale 1s ease forwards;
+  }
+
+  /* Neon Gradient Birthday Text */
+  .typewriter {
+    font-size: 2.6rem;
+    font-weight: 900;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid rgba(255,255,255,0.8);
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb, #fad0c4);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: typewriter 4s steps(30) 1s 1 normal both,
+               gradientShift 6s ease-in-out infinite,
+               glow 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #fff;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.9);
+    line-height: 1.6;
+  }
+
+  #timer {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 0 0 12px #ffeb3b, 0 0 24px #ff9800;
+    animation: glowTimer 2s ease-in-out infinite alternate;
+  }
+
+  /* Animations */
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff4b5c, 0 0 20px #ff4b5c; }
+    to { text-shadow: 0 0 20px #ffb347, 0 0 40px #ffeb3b; }
+  }
+  @keyframes glowTimer {
+    from { text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff9800; }
+    to { text-shadow: 0 0 20px #ffe082, 0 0 40px #ffc107; }
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Floating Balloons */
+  .balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 60px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #ff9a9e, #ff4b5c);
+    border-radius: 50% 50% 45% 55%;
+    animation: float 10s linear infinite;
+    z-index: 1;
+  }
+  .balloon:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background: #fff;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.1); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="letter" id="letter">
+    <h2>Open the Letter 💌</h2>
+  </div>
+
+  <div class="container" id="birthdayScene">
+    <h1 class="typewriter">Happy Birthday Shriya🎉</h1>
+    <p>On this special day, I just want to tell you how precious you are 💫. Life brings many people into our journey, but very few touch our hearts the way you do ❤️. You are one of those rare people whose presence brings comfort 🤍, whose words bring peace 🌿, and whose smile brings warmth ✨.
+
+May this year be the beginning of all the things you truly deserve — endless happiness 😊, pure love 💖, mental peace 🕊️, and success that makes you proud of yourself 🌟. May every moment of your life shine brighter than the last one ✨✨. I hope new opportunities open for you 🚪💛, new dreams rise within you 🌈, and new reasons to smile surround you every single day 🌻😊.</p>
+    <div id="timer"></div>
+  </div>
+
+  <script>
+    const letter = document.getElementById('letter');
+    const scene = document.getElementById('birthdayScene');
+
+    letter.addEventListener('click', () => {
+      letter.style.display = 'none';
+      scene.style.display = 'flex';
+      document.body.style.background = "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed";
+      document.body.style.backgroundSize = "cover";
+
+      // Create balloons
+      for (let i = 0; i < 15; i++) {
+        let balloon = document.createElement("div");
+        balloon.classList.add("balloon");
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.animationDuration = (8 + Math.random() * 5) + "s";
+        document.body.appendChild(balloon);
+
+        setTimeout(() => {
+          balloon.remove();
+        }, 15000);
+      }
+    });
+
+    // Timer
+    const birthDate = new Date("2011-09-25T00:00:00");
+    function updateTimer() {
+      const now = new Date();
+      let diff = now - birthDate;
+      let totalYears = 16;
+      let totalMonths = 192;
+      let totalDays = 5844;
+      let totalHours = 140256;
+      let totalMinutes = 8415360;
+      let totalSeconds = Math.floor(diff / 1000);
+      document.getElementById("timer").innerText =
+        `You have completed ${totalYears} years, ${totalMonths} months, ${totalDays} days, ${totalHours} hrs, ${totalMinutes} minutes, and ${totalSeconds} seconds ⏳`;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>
